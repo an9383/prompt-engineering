@@ -5,7 +5,9 @@ import os
 import pandas as pd
 from serpapi import GoogleSearch
 from typing import List
-
+import asyncio
+import sys
+from concurrent.futures import ThreadPoolExecutor
 
 class ChromiumLoader(AsyncChromiumLoader):
     async def load(self):
@@ -18,24 +20,33 @@ async def get_html_content_from_urls(
     df: pd.DataFrame, number_of_urls: int = 3, url_column: str = "link"
 ) -> List[Document]:
     # Get the HTML content of the first 3 URLs:
-    urls = df[url_column].values[:number_of_urls].tolist()
+    urls = df[url_column].head(number_of_urls).tolist()
 
-    # If there is only one URL, convert it to a list:
-    if isinstance(urls, str):
-        urls = [urls]
-
-    # Check for empty URLs:
-    urls = [url for url in urls if url != ""]
-
-    # Check for duplicate URLs:
-    urls = list(set(urls))
-
-    # Throw error if no URLs are found:
-    if len(urls) == 0:
-        raise ValueError("No URLs found!")
-    # loader = AsyncHtmlLoader(urls) # Faster but might not always work.
+    # loader = AsyncHtmlLoader(urls) 
     loader = ChromiumLoader(urls)
-    docs = await loader.load()
+
+    # --- WINDOWS JUPYTER PLAYWRIGHT FIX ---
+    if sys.platform == "win32":
+        def _run_playwright_in_thread():
+            # 1. Force the Proactor policy for this new thread
+            asyncio.set_event_loop_policy(asyncio.WindowsProactorEventLoopPolicy())
+            # 2. Create a brand new event loop for this thread
+            loop = asyncio.new_event_loop()
+            asyncio.set_event_loop(loop)
+            try:
+                # 3. Run the loader in this new, compatible loop
+                return loop.run_until_complete(loader.load())
+            finally:
+                loop.close()
+
+        # 4. Run the thread function using Jupyter's main loop executor
+        with ThreadPoolExecutor(max_workers=1) as pool:
+            docs = await asyncio.get_event_loop().run_in_executor(pool, _run_playwright_in_thread)
+    else:
+        # For Mac/Linux, the default loop already supports subprocesses
+        docs = await loader.load()
+    # --------------------------------------
+
     return docs
 
 
@@ -57,8 +68,18 @@ async def collect_serp_data_and_extract_text_from_webpages(
     # Get the results:
     result = search.get_dict()
 
-    # Put the results in a Pandas DataFrame:
-    serp_results = pd.DataFrame(result["organic_results"])
+    # 1. Check for API errors first
+    if "error" in result:
+        raise ValueError(f"Search API returned an error: {result['error']}")
+    
+    # 2. Check if organic_results exists and is not empty
+    if "organic_results" not in result or not result["organic_results"]:
+        print(f"Warning: No organic results found for topic: '{topic}'")
+        print(f"Full API Response: {result}") # This will help you debug the exact issue
+        serp_results = pd.DataFrame() # Create an empty DataFrame
+    else:
+        # Put the results in a Pandas DataFrame:
+        serp_results = pd.DataFrame(result["organic_results"])
 
     # Extract the html content from the URLs:
     html_documents = await get_html_content_from_urls(serp_results)
