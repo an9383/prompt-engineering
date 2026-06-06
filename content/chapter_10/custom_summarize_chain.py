@@ -1,11 +1,11 @@
 import asyncio
 from langchain_openai.chat_models import ChatOpenAI
-from langchain.output_parsers import PydanticOutputParser
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_core.output_parsers import PydanticOutputParser
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.documents import Document
 from pydantic.v1 import BaseModel
-from langchain.chains import LLMChain
-from langchain.chains.combine_documents.stuff import StuffDocumentsChain
+from langchain_classic.chains import LLMChain
+from langchain_classic.chains.combine_documents.stuff import StuffDocumentsChain
 from typing import Dict, List, Optional, Union
 import time
 from langchain_core.prompts import PromptTemplate

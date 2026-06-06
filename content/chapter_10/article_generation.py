@@ -1,9 +1,9 @@
-from langchain.chains import LLMChain
+from langchain_classic.chains import LLMChain
 from typing import List, Dict, Any
 from langchain_community.vectorstores.chroma import Chroma
 from langchain_openai.embeddings import OpenAIEmbeddings
-from langchain.text_splitter import RecursiveCharacterTextSplitter
-from langchain.memory import ConversationSummaryBufferMemory
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_classic.memory.summary_buffer import ConversationSummaryBufferMemory
 from langchain_openai.chat_models import ChatOpenAI
 from langchain_core.prompts import (
     ChatPromptTemplate,

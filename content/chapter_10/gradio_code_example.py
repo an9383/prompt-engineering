@@ -1,7 +1,7 @@
 import asyncio
 from langchain_openai.chat_models import ChatOpenAI
-from langchain.output_parsers import PydanticOutputParser
-from langchain.text_splitter import RecursiveCharacterTextSplitter
+from langchain_core.output_parsers import PydanticOutputParser
+from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.documents import Document
 import gradio as gr
 import getpass

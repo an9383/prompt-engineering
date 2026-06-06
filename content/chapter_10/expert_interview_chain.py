@@ -4,7 +4,7 @@ from typing import List, Any
 
 # Langchain libraries
 from langchain_openai.chat_models import ChatOpenAI
-from langchain.output_parsers import PydanticOutputParser
+from langchain_core.output_parsers import PydanticOutputParser
 from langchain_core.prompts import (
     SystemMessagePromptTemplate,
     HumanMessagePromptTemplate,

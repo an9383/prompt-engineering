@@ -13,7 +13,7 @@ class BlogOutline(BaseModel):
 
 # Langchain libraries:
 from langchain_core.prompts.chat import ChatPromptTemplate, SystemMessagePromptTemplate
-from langchain.output_parsers import PydanticOutputParser
+from langchain_core.output_parsers import PydanticOutputParser
 from langchain_openai.chat_models import ChatOpenAI
 
 # Custom types:
