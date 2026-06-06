@@ -6,6 +6,8 @@
     "input_types": {},
     "output_parser": null,
     "partial_variables": {},
+    "metadata": null,
+    "tags": null,
     "template": "Translate this sentence from English to Spanish.\nSentence: {sentence}\nTranslation:",
     "template_format": "f-string",
     "validate_template": false,

@@ -15,3 +15,7 @@ interview.txt
 **/**.index
 oreilly
 **.model
+.venv/
+home/
+.idea/
+chap9/

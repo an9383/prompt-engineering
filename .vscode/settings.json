@@ -1,0 +1,6 @@
+{
+    "python.analysis.extraPaths": [
+        "./content/chapter_3/5.sentence_detection_in_"
+    ],
+    "git.ignoreLimitWarning": true
+}

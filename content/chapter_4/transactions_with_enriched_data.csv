@@ -1,0 +1,21 @@
+Transaction Description,transaction_type,transaction_category
+cash deposit at local branch,Deposit,Other
+cash deposit at local branch,Deposit,Other
+withdrew money for rent payment,Withdrawal,Rent
+withdrew cash for weekend expenses,Withdrawal,Other
+purchased books from the bookstore,Purchase,Other
+tax refund deposit,Deposit,Other
+refund from clothing store,Refund,Other
+withdrew money for rent payment,Withdrawal,Rent
+insurance claim refund,Refund,Other
+paid subscription service fee,Bill Payment,Other
+purchased groceries at the local market,Purchase,Food
+refund for returned electronics,Refund,Other
+withdrew money for rent payment,Withdrawal,Rent
+deposited gift money,Deposit,Other
+paid for streaming service,Bill Payment,Entertainment
+bought a watch from the jewelry store,Purchase,Other
+utility bill payment for electricity,Bill Payment,Utilities
+withdrew cash for weekend expenses,Withdrawal,Other
+withdrew cash for weekend expenses,Withdrawal,Other
+bought a new smartphone from the electronics store,Purchase,Other
