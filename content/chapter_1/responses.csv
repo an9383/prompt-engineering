@@ -2,48 +2,48 @@ variant,prompt,response
 A,"Product description: A pair of shoes that can
 fit any foot size.
 Seed words: adaptable, fit, omni-fit.
-Product names:","1. OmniFit Shoes
-2. AdaptiFit Footwear
-3. Infinite Fit Sneakers
-4. Universal Fit Shoes
-5. CustomFit Footgear"
-A,"Product description: A pair of shoes that can
-fit any foot size.
-Seed words: adaptable, fit, omni-fit.
-Product names:","1. FlexiFit Shoes
-2. AdaptaSoles
-3. OmniFit Footwear
-4. OneSize Fits All Shoes
-5. FootFlex Fit
-6. FitAll Footwear
-7. SizeSavvy Shoes
-8. Unifit Footgear
-9. VersaFit Sneakers
-10. AllFit Shoes"
+Product names:","1. OmniFit Flex Shoes
+2. AdaptaSole Sneakers
+3. FlexiFit Footwear
+4. AllFit Comfort Shoes
+5. SizeSmart Sneakers"
 A,"Product description: A pair of shoes that can
 fit any foot size.
 Seed words: adaptable, fit, omni-fit.
 Product names:","1. AdaptiFit Shoes
-2. OmniWear Footwear
-3. FlexiFit Sneakers
-4. UniversalFit Flats
-5. SizeFlex Shoes"
+2. OmniSize Shoes
+3. FlexiFit Footwear
+4. Universal Fit Shoes
+5. OmniFootwear
+6. FlexiSize Shoes
+7. PrimeFit Footwear
+8. AllFit Shoes
+9. VersaFit Shoes
+10. InfiniteFit Footwear"
 A,"Product description: A pair of shoes that can
 fit any foot size.
 Seed words: adaptable, fit, omni-fit.
-Product names:","1. OmniFit Flex Shoes
-2. AdaptaFit All-In-One Shoes
-3. Perfect Fit Adaptable Shoes
-4. OmniComfort Fit Shoes
-5. FlexiFit Universal Shoes"
+Product names:","1. FlexiFit Shoes
+2. SizeFlex Shoes
+3. OmniFit Footwear
+4. AdaptaSole Shoes
+5. UniSize Shoes"
+A,"Product description: A pair of shoes that can
+fit any foot size.
+Seed words: adaptable, fit, omni-fit.
+Product names:","1. OmniSole Shoes
+2. FitFlex Footwear
+3. AdaptaFit Shoes
+4. UniversalStride Footwear
+5. FlexiFit Footgear"
 A,"Product description: A pair of shoes that can
 fit any foot size.
 Seed words: adaptable, fit, omni-fit.
 Product names:","1. OmniFit Shoes
-2. AdaptiSoles
-3. UniversalFit Footwear
-4. FlexiFit Shoes
-5. VersaSneakers"
+2. AdaptiSize Shoes
+3. FlexFit Footwear
+4. Universal Sneakers
+5. VersaFit Shoes"
 B,"Product description: A home milkshake maker.
 Seed words: fast, healthy, compact.
 Product names: HomeShaker, Fit Shaker, QuickShake, Shake
@@ -58,8 +58,7 @@ EliptoTime.
 Product description: A pair of shoes that can fit any foot
 size.
 Seed words: adaptable, fit, omni-fit.
-Product names:","FitFlex Shoes, OmniStep Sneakers, AdaptiSoles,
-SizeMaster Shoes"
+Product names:","AdaptaFit Shoes, SizeFlex Footwear, OmniStride Shoes, FitMaster Footwear"
 B,"Product description: A home milkshake maker.
 Seed words: fast, healthy, compact.
 Product names: HomeShaker, Fit Shaker, QuickShake, Shake
@@ -74,7 +73,7 @@ EliptoTime.
 Product description: A pair of shoes that can fit any foot
 size.
 Seed words: adaptable, fit, omni-fit.
-Product names:","AdaptaFit Shoes, FlexiFit Footwear, OmniSole Shoes, FitAll Sneakers."
+Product names:","AdaptiFit, OmniShoe, FitAll, FlexiFit."
 B,"Product description: A home milkshake maker.
 Seed words: fast, healthy, compact.
 Product names: HomeShaker, Fit Shaker, QuickShake, Shake
@@ -89,7 +88,7 @@ EliptoTime.
 Product description: A pair of shoes that can fit any foot
 size.
 Seed words: adaptable, fit, omni-fit.
-Product names:","AdaptaFit Shoes, OmniSize Shoes, FitAll Footwear, UniversalFit Sneakers"
+Product names:","AdaptoFit, OmniShoes, FitFlex, SizeSavvy."
 B,"Product description: A home milkshake maker.
 Seed words: fast, healthy, compact.
 Product names: HomeShaker, Fit Shaker, QuickShake, Shake
@@ -104,8 +103,7 @@ EliptoTime.
 Product description: A pair of shoes that can fit any foot
 size.
 Seed words: adaptable, fit, omni-fit.
-Product names:","AdaptaFit Shoes, OmniFootwear, FitAll Shoes, FlexiFit
-Sneakers"
+Product names:","FitAll Shoes, AdaptiFit Sneakers, OmniSize Footwear, CustomFit Shoes"
 B,"Product description: A home milkshake maker.
 Seed words: fast, healthy, compact.
 Product names: HomeShaker, Fit Shaker, QuickShake, Shake
@@ -120,4 +118,4 @@ EliptoTime.
 Product description: A pair of shoes that can fit any foot
 size.
 Seed words: adaptable, fit, omni-fit.
-Product names:","AdaptaSoles, FitFlex, OmniFitShoes, SoleMaster"
+Product names:","AdaptaFit, OmniShoe, FitPerfect, SizeFlex"
